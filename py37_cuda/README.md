@@ -27,8 +27,8 @@ A few good examples on how to dockerize Detectron2:
 * [this method](https://github.com/mkang30/ImageDecomposer/blob/master/fastapi/Dockerfile) uses a zip version of Detectron2
 * But you could just specify the version explicitly in your pip install [like this approach](https://github.com/gkswjdzz/ainized-detectron2/blob/7f9907b4e2381f26f269ebf20639019c791173b7/Dockerfile-gpu#L23) or consult [here in the official doc](https://detectron2.readthedocs.io/tutorials/install.html#install-pre-built-detectron2-linux-only)
 
-[this Dockerfile](Dockerfile-detectron2) uses:
-* Python `3.7`
+[this Dockerfile](Dockerfile-detectron2official) uses:
+* Python `3.6.9`
 * CUDA `10.1`
 * PyTorch `1.5` + torchvision `0.6`
 * Detectron2 `0.1.3`
@@ -36,4 +36,9 @@ A few good examples on how to dockerize Detectron2:
 to check which version of Detectron2 you are using:
 ```
 python -m detectron2.utils.collect_env
+```
+Demo:
+```
+docker run -it --gpus all --rm ohjho/py37_cuda:10.1-torch1.5-detectron0.1.3
+>  python -m detectron2.utils.collect_env
 ```
