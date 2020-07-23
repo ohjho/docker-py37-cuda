@@ -1,13 +1,6 @@
-#FROM pytorch/pytorch:1.2-cuda10.0-cudnn7-runtime
-ARG CUDA_VERSION=10.0
-FROM ohjho/py37_cuda:${CUDA_VERSION}
+FROM ohjho/py37_cuda:10.1-torch1.5-detectron0.1.3
 
 LABEL maintainer="ohjho <john@miro.io>"
-
-# # Download wget, useful for downloading weights
-# RUN  apt-get update \
-#   && apt-get install -y wget \
-#   && rm -rf /var/lib/apt/lists/*
 
 RUN pip install uvicorn gunicorn
 
