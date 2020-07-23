@@ -1,3 +1,4 @@
+# base image is missing some requirements for the detectron2 install
 ARG CUDA_VERSION=10.1
 FROM ohjho/py37_cuda:${CUDA_VERSION}
 
