@@ -13,3 +13,5 @@ docker run --gpus all --rm ohjho/py_deep_learning_fastapi:CUDA10.0-Py3.7
 ```
 
 Credit: [tiangolo](https://github.com/tiangolo/uvicorn-gunicorn-machine-learning-docker/tree/master/cuda9.1-python3.7)
+
+This directory is used to generate images on [this DockerHub repo](https://hub.docker.com/repository/docker/ohjho/py_deep_learning_fastapi)
