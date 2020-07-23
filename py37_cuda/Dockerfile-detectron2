@@ -9,8 +9,8 @@ RUN pip install torch==1.5+cu101 torchvision==0.6+cu101 -f https://download.pyto
 RUN pip install pycocotools>=2.0.1
 
 # install detectron2
-ENV DETECTRON2_VERSION=0.1.3
-RUN git clone -b v$DETECTRON2_VERSION https://github.com/facebookresearch/detectron2 detectron2_repo
+ARG DETECTRON2_VERSION=0.1.3
+RUN git clone -b v${DETECTRON2_VERSION} https://github.com/facebookresearch/detectron2 detectron2_repo
 # set FORCE_CUDA because during `docker build` cuda is not accessible
 ENV FORCE_CUDA="1"
 # This will by default build detectron2 for all common cuda architectures and take a lot more time,
