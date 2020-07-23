@@ -5,12 +5,12 @@ LABEL maintainer="ohjho <john@miro.io>"
 RUN pip install uvicorn gunicorn
 
 COPY ./start.sh /start.sh
-RUN chmod +x /start.sh
+RUN sudo chmod +x /start.sh
 
 COPY ./gunicorn_conf.py /gunicorn_conf.py
 
 COPY ./start-reload.sh /start-reload.sh
-RUN chmod +x /start-reload.sh
+RUN sudo chmod +x /start-reload.sh
 
 COPY ./app /app
 WORKDIR /app/
