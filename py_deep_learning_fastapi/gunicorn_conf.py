@@ -35,6 +35,7 @@ use_errorlog = errorlog_var or None
 graceful_timeout_str = os.getenv("GRACEFUL_TIMEOUT", "120")
 timeout_str = os.getenv("TIMEOUT", "120")
 keepalive_str = os.getenv("KEEP_ALIVE", "5")
+max_requests_str = os.getenv("MAX_REQUESTS", "0")
 
 # Gunicorn config variables
 loglevel = use_loglevel
@@ -46,6 +47,7 @@ accesslog = use_accesslog
 graceful_timeout = int(graceful_timeout_str)
 timeout = int(timeout_str)
 keepalive = int(keepalive_str)
+maxrequests = int(max_requests_str)
 
 
 # For debugging and testing
@@ -56,6 +58,7 @@ log_data = {
     "graceful_timeout": graceful_timeout,
     "timeout": timeout,
     "keepalive": keepalive,
+    "max_requests": maxrequests,
     "errorlog": errorlog,
     "accesslog": accesslog,
     # Additional, non-gunicorn variables
