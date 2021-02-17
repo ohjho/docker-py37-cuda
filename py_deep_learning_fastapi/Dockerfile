@@ -9,7 +9,7 @@ LABEL maintainer="ohjho <john@miro.io>"
 #   && apt-get install -y wget \
 #   && rm -rf /var/lib/apt/lists/*
 
-RUN pip install uvicorn gunicorn
+RUN pip install uvicorn gunicorn --no-cache-dir
 
 COPY ./start.sh /start.sh
 RUN chmod +x /start.sh

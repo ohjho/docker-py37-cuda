@@ -33,6 +33,11 @@ A few good examples on how to dockerize Detectron2:
 * PyTorch `1.5` + torchvision `0.6`
 * Detectron2 `0.1.3`
 
+To build, you need to run the following on a machine with GPU and `nvidia-docker2`:
+```
+docker build -t ohjho/py37_cuda:[version tag] -f Dockerfile-detectron2official .
+```
+
 to check which version of Detectron2 you are using:
 ```
 python -m detectron2.utils.collect_env

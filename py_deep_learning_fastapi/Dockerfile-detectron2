@@ -2,7 +2,7 @@ FROM ohjho/py37_cuda:10.1-torch1.5-detectron0.1.3
 
 LABEL maintainer="ohjho <john@miro.io>"
 
-RUN pip install uvicorn gunicorn
+RUN pip install uvicorn gunicorn --no-cache-dir
 
 COPY ./start.sh /start.sh
 RUN sudo chmod +x /start.sh
